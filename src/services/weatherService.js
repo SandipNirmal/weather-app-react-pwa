@@ -1,7 +1,6 @@
 import * as axios from 'axios';
 
-axios.defaults.baseURL = process.env.REACT_APP_YAHOO_WEATHER_API_ENDPOINT;
-axios.defaults.headers.post['Content-Type'] = 'application/json';
+import {getAuthToken} from './authToken'
 
 /**
  * Fetches the weather information for city based on passed latitude and
@@ -11,9 +10,15 @@ axios.defaults.headers.post['Content-Type'] = 'application/json';
  * @param {number} lon - longitude cordinates for city
  */
 const getWeatherForCity = (lat, lon) => {
-  return {
-    data: 'city weather info'
-  }
+  const params = `lat=${lat}&lon=${lon}`
+  const url = `${process.env.REACT_APP_YAHOO_WEATHER_API_ENDPOINT}?${params}&format=json`;
+  axios.headers[''] = getAuthToken({lat, lon})
+  
+  return axios.get(url)
+
+  // return {
+  //   data: 'city weather info'
+  // }
 }
 
 export {

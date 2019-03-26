@@ -1,13 +1,15 @@
-import CryptoJS from 'crypto'
+import CryptoJS from 'crypto-js'
 
 /**
  * Generates OAuth token for Yahoo Weather API
+ * 
+ * @param {object} location {lat: '', lon: ''}
  */
 const getAuthToken = (location) => {
   const concat = '&';
   const method = 'GET';
   const oauth = {
-    'oauth_consumer_key': process.env.REACT_APP_YAHOO_WEATHER_API_ENDPOINT,
+    'oauth_consumer_key': process.env.REACT_APP_CONSUMER_KEY,
     'oauth_nonce': Math
       .random()
       .toString(36)
@@ -21,6 +23,7 @@ const getAuthToken = (location) => {
     ...location,
     'format': 'json'
   }, oauth)
+
   // Note the sorting here is required
   const merged_arr = Object
     .keys(merged)
@@ -31,7 +34,7 @@ const getAuthToken = (location) => {
 
   const signature_base_str = method + concat + encodeURIComponent(process.env.REACT_APP_YAHOO_WEATHER_API_ENDPOINT) + concat + encodeURIComponent(merged_arr.join(concat));
 
-  const composite_key = encodeURIComponent(process.env.REACT_APP_YAHOO_WEATHER_API_ENDPOINT) + concat;
+  const composite_key = encodeURIComponent(process.env.REACT_APP_CONSUMER_SECRET) + concat;
   const hash = CryptoJS.HmacSHA1(signature_base_str, composite_key);
   const signature = hash.toString(CryptoJS.enc.Base64);
 
