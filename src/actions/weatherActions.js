@@ -1,0 +1,5 @@
+export const WEATHER_INFO_PENDING = 'WEATHER_INFO_PENDING'
+export const WEATHER_INFO_FULFILLED = 'WEATHER_INFO_FULFILLED'
+export const WEATHER_INFO_REJECTED = 'WEATHER_INFO_REJECTED'
+
+export const fetchWeatherInfo = () => {}
