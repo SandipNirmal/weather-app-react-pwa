@@ -6,7 +6,7 @@ const initialState = {
   error: false
 }
 
-export const CITYReducer = (state = initialState, action) => {
+export const CityReducer = (state = initialState, action) => {
 
   switch (action.type) {
 

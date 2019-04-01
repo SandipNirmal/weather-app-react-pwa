@@ -7,7 +7,6 @@ const initialState = {
 }
 
 export const WeatherReducer = (state = initialState, action) => {
-
   switch (action.type) {
 
     case WEATHER_INFO_PENDING:
