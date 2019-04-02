@@ -1,4 +1,4 @@
-import { getWeatherForCity } from './../actions'
+import { getWeatherForCity } from './../services'
 
 export const WEATHER_INFO = 'WEATHER_INFO'
 export const WEATHER_INFO_PENDING = 'WEATHER_INFO_PENDING'
