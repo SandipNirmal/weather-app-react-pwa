@@ -1,6 +1,5 @@
 # Progressive Web Weather app using React
 
-
 ## Description
 
 Progressive Web App built using
@@ -20,3 +19,4 @@ GeoDB is RESTful API which provides city information by city name. You can get m
 ## Create .env
 
 Create `.env` file similar to `.env.example` and update API keys from Yahoo Weather API.
+
