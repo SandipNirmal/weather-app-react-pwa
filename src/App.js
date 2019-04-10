@@ -14,8 +14,8 @@ class App extends Component {
   }
 
   fetchWeather = async () => {
-    const lat = 18.491192084699236
-    const lon = 73.79232377097964
+    const lat = 18.491196888942024
+    const lon = 73.7923624709481
 
     try {
       const weather = await getWeatherForCity(lat, lon)

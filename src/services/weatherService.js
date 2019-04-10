@@ -11,8 +11,12 @@ const getWeatherForCity = (lat, lon) => {
   const params = `lat=${lat}&lon=${lon}`
   const url = `${process.env.REACT_APP_YAHOO_WEATHER_API_ENDPOINT}?${params}&format=json`;
 
+  const auth_header = getAuthToken({lat, lon})
+
   let headers = new Headers();
-  headers.set('Authorization', getAuthToken({lat, lon}));
+  headers.set('Authorization', auth_header);
+
+  console.log('auth_header', auth_header)
 
   return fetch(url, {headers}).then((res) => res.json())
 }
