@@ -1,6 +1,7 @@
 import React from 'react'
 
 import {Card} from '../../components'
+import { getWindDirection } from './../../services'
 
 export const Wind = React.memo(({data: {chill, direction, speed}}) => {
   return (
@@ -8,7 +9,7 @@ export const Wind = React.memo(({data: {chill, direction, speed}}) => {
       <div>
         <div className='title'>Wind</div>
         <div>Chill: {chill}</div>
-        <div>Direction: {direction}</div>
+        <div>Direction: {getWindDirection(direction)}</div>
         <div>Speed: {speed}</div>
       </div>
   </Card>
