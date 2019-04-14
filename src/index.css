@@ -2,19 +2,18 @@ html {
   background: #6c00f6;
   background: linear-gradient(23deg, #6c00f67a, #6c00f6 50%);
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 body {
   max-width: 980px;
   margin: 20px auto;
   color: #ffffff;
-  font-size: 1.2em;
   /* Use systems default font */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Fira Sans', 'Open Sans', 'Helvetica Neue', sans-serif;
   /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.54);
+  /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.54); */
 }

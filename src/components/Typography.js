@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Typography = ({variant, children}) => {
+export const Typography = ({variant, children, ...other}) => {
   let Element = 'p'
   let className = 'body1'
 
@@ -75,5 +75,5 @@ export const Typography = ({variant, children}) => {
       className = 'body1'
   }
 
-  return <Element className={className}>{children}</Element>
+  return <Element className={className} {...other}>{children}</Element>
 }

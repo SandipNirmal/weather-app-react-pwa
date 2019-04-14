@@ -18,7 +18,7 @@ export const CurrentWeather = React.memo(({
       <div className='flex center' style={{
         flexDirection: 'column'
       }}>
-        <Typography variant='h5'>{text}</Typography>
+        <Typography>{text}</Typography>
         <div className='flex center'>
           <img
             src={Cond[`Cond_${getConditionIcon(code)}`]}

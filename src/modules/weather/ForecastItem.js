@@ -1,11 +1,30 @@
 import React from 'react'
 
-const ForecastItemComponent = ({day, min, max, cond}) => {
+import {Typography} from '../../components';
+import * as Cond from './../../resources/icons'
+import {farenheitToCelsius, getConditionIcon} from './../../services'
+
+const ForecastItemComponent = ({day, min, max, code, text}) => {
   return (
-    <div>
-      <div>{day}</div>
-      <div>{cond}</div>
-      <div>{`${min} / ${max}`}</div>
+    <div className='forecast-item'>
+      <div className='flex forecast-item-day'>
+        <Typography variant='overline'>{day}</Typography>
+      </div>
+
+      <div className='flex forecast-item-cond'>
+        <div className='flex center'>
+          <img
+            src={Cond[`Cond_${getConditionIcon(code)}`]}
+            alt={text}
+            className='forecast-cond-code'/>
+          <Typography variant='caption'>{text}</Typography>
+        </div>
+        <div>
+          <Typography variant='subtitle2'>
+            {farenheitToCelsius(min)}&#xb0; / {farenheitToCelsius(max)}&#xb0;
+          </Typography>
+        </div>
+      </div>
     </div>
   )
 }
