@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Typography } from './../../components'
 
-export const CityInfo = React.memo(({info: {city, region, country}}) => {
+export const CityInfo = React.memo(({info: {city = '--', region, country}}) => {
     return (
       <div className={'flex center'}>
         <Typography variant='h4'>

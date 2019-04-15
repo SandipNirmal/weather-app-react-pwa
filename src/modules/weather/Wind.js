@@ -1,17 +1,33 @@
 import React from 'react'
 
-import {Card} from '../../components'
-import { getWindDirection } from './../../services'
+import {Card, Typography} from '../../components'
+import {getWindDirection, milesToKms} from './../../services'
 
-export const Wind = React.memo(({data: {chill, direction, speed}}) => {
+export const Wind = React.memo(({
+  data: {
+    chill,
+    direction,
+    speed
+  }
+}) => {
   return (
-    <Card>
-      <div>
-        <div className='title'>Wind</div>
-        <div>Chill: {chill}</div>
-        <div>Direction: {getWindDirection(direction)}</div>
-        <div>Speed: {speed}</div>
-      </div>
-  </Card>
+    <div className='wind'>
+      <Card>
+        <div className='title'>
+          <Typography
+            variant='subtitle1'
+            style={{
+            textTransform: 'uppercase'
+          }}>Wind</Typography>
+        </div>
+
+        <div>
+          <Typography>Chill: {chill}</Typography>
+          <Typography>Direction: {getWindDirection(direction)}</Typography>
+          <Typography>Speed: {milesToKms(speed).toFixed(2)}
+            kmph</Typography>
+        </div>
+      </Card>
+    </div>
   )
 })

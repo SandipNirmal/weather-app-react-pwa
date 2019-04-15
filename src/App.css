@@ -145,9 +145,22 @@ img.cond-code {
 }
 
 .forecast-cond-code {
-  width: 40px
+  width: 40px;
 }
 
+/** Weather details */
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.wind,
+.astrology,
+.atmosphere {
+  flex: 1;
+}
+
+/** Media Queries */
 @media (min-width: 480px) {
   .forecasts {
     display: flex;
@@ -160,7 +173,25 @@ img.cond-code {
     min-width: 110px;
   }
 
-  .forecast-item, .forecast-item-cond, .forecast-item-cond :first-child {
+  .forecast-item,
+  .forecast-item-cond,
+  .forecast-item-cond :first-child {
     flex-direction: column;
+  }
+
+  .details {
+    flex-direction: row;
+  }
+
+  .details div {
+    margin: 0 4px;
+  }
+
+  .details :first-child {
+    margin-left: 0;
+  }
+
+  .details :last-child {
+    margin-right: 0;
   }
 }

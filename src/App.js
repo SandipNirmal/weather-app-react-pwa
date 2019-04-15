@@ -4,7 +4,14 @@ import {getWeatherForCity} from './services'
 
 import './App.css';
 
-import {CityInfo, Wind, CurrentWeather, Forecasts} from './modules/weather'
+import {
+  CityInfo,
+  Wind,
+  CurrentWeather,
+  Forecasts,
+  Astronomy,
+  Atmosphere
+} from './modules/weather'
 
 // TODO - Remove this once done with the UI
 const weather_data = {
@@ -136,10 +143,18 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <CityInfo info={weather_data.location}/>
-        <CurrentWeather weather={weather_data.current_observation.condition}/>
+        <CityInfo info={weather_data.location || {}}/>
+        <CurrentWeather
+          weather={weather_data.current_observation
+          ? weather_data.current_observation.condition
+          : {}}/>
         <Forecasts forecasts={weather_data.forecasts || []}/>
-        <Wind data={weather_data.current_observation.wind}/>
+
+        <div className='details'>
+          <Wind data={weather_data.current_observation.wind}/>
+          <Astronomy data={weather_data.current_observation.astronomy}/>
+          <Atmosphere data={weather_data.current_observation.atmosphere}/>
+        </div>
       </div>
     );
   }
