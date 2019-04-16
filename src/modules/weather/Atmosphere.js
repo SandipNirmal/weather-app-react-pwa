@@ -22,8 +22,8 @@ export const Atmosphere = React.memo(({
         </div>
         <div>
           <Typography>Humidity: {humidity} % </Typography>
-          <Typography>Visibility: {milesToKms(visibility).toFixed(2)} KM</Typography>
-          <Typography>Pressure: {pressureInchesToMillibar(pressure)} mb</Typography>
+          <Typography>Visibility: {milesToKms(visibility).toFixed(2)} km</Typography>
+          <Typography>Pressure: {pressureInchesToMillibar(pressure)} millibar</Typography>
         </div>
       </Card>
     </div>

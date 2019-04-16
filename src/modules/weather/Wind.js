@@ -2,6 +2,7 @@ import React from 'react'
 
 import {Card, Typography} from '../../components'
 import {getWindDirection, milesToKms} from './../../services'
+import { Turbine } from './../../resources/icons'
 
 export const Wind = React.memo(({
   data: {
@@ -21,11 +22,13 @@ export const Wind = React.memo(({
           }}>Wind</Typography>
         </div>
 
-        <div>
-          <Typography>Chill: {chill}</Typography>
-          <Typography>Direction: {getWindDirection(direction)}</Typography>
-          <Typography>Speed: {milesToKms(speed).toFixed(2)}
-            kmph</Typography>
+        <div className='flex center' style={{justifyContent: 'space-between', paddingTop: 8}}>
+          <img className="turbine" alt="tubine" src={Turbine} />
+          <div>
+            <Typography>Chill: {chill}</Typography>
+            <Typography>Speed: {milesToKms(speed).toFixed(2)} kmph</Typography>
+            <Typography>Sirection: {getWindDirection(direction)}</Typography>
+          </div>
         </div>
       </Card>
     </div>

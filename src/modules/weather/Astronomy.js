@@ -37,14 +37,16 @@ export class Astronomy extends React.PureComponent {
             }}>Sun &amp; Moon</Typography>
           </div>
 
-          <div className='flex center'>
+          <div className='flex astrology-detail'>
             <div className="sun-pos">
               <canvas id="astro-img" width="200" height="120"></canvas>
             </div>
 
-            <div>
-              <Typography>Rise: {sunrise}</Typography>
-              <Typography>Set: {sunset}</Typography>
+            <div className='flex' style={{flexDirection: 'column'}}>
+              <Typography variant='overline'>Sunrise</Typography>
+              <Typography variant='caption'>{sunrise}</Typography>
+              <Typography variant='overline'>Sunset</Typography>
+              <Typography variant='caption'>{sunset}</Typography>
             </div>
           </div>
 

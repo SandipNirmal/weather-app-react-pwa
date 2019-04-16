@@ -5,7 +5,7 @@
 .card {
   background-color: rgba(0, 0, 0, 0.54);
   padding: 10px;
-  margin: 10px auto;
+  margin: 10px 8px;
 }
 
 .card .title {
@@ -160,12 +160,21 @@ img.cond-code {
   flex: 1;
 }
 
+.astrology-detail {
+  justify-content: space-between;
+  align-items: center;
+}
+
 /** Media Queries */
 @media (min-width: 480px) {
   .forecasts {
     display: flex;
     overflow-x: scroll;
     padding-bottom: 16px;
+  }
+
+  .card {
+    margin: 10px auto;
   }
 
   .forecast-item {

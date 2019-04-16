@@ -6,6 +6,7 @@ import Cond_24 from './24.png'
 import Cond_26 from './26.png'
 import Cond_30 from './30.png'
 import Cond_32 from './32.png'
+import Turbine from './turbine.png'
 
 export {
   Cond_4,
@@ -15,5 +16,6 @@ export {
   Cond_24,
   Cond_26,
   Cond_30,
-  Cond_32
+  Cond_32,
+  Turbine
 }
