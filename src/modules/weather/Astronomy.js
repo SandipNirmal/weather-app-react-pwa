@@ -43,9 +43,9 @@ export class Astronomy extends React.PureComponent {
             </div>
 
             <div className='flex' style={{flexDirection: 'column'}}>
-              <Typography variant='overline'>Sunrise</Typography>
+              <Typography variant='subtitle3'>Sunrise</Typography>
               <Typography variant='caption'>{sunrise}</Typography>
-              <Typography variant='overline'>Sunset</Typography>
+              <Typography variant='subtitle3'>Sunset</Typography>
               <Typography variant='caption'>{sunset}</Typography>
             </div>
           </div>

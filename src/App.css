@@ -115,6 +115,14 @@ img.cond-code {
   text-transform: uppercase;
 }
 
+.subtitle3 {
+  font-size: 0.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.08333em;
+  text-transform: uppercase;
+}
+
 /**
   * Utility classes
   */

@@ -44,6 +44,11 @@ export const Typography = ({variant, children, ...other}) => {
       Element = 'h6'
       className = 'subtitle2'
       break;
+    
+    case 'subtitle3':
+      Element = 'h6'
+      className = 'subtitle3'
+      break;
 
     case 'body1':
       Element = 'p'
