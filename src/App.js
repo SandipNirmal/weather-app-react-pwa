@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+import { Typography } from './components'
 import { getWeatherForCity } from './services';
 
 import './App.css';
@@ -27,7 +28,9 @@ function App() {
       try {
         const weather = await getWeatherForCity(lat, lon);
         setWeatherData(weatherData => weatherData.weather_data = weather);
+
         isError && setError(false)
+        !weather.location.city && setError(true)
       } catch (e) {
         console.log('Error', e);
         setError(true)
@@ -40,9 +43,9 @@ function App() {
   }, []);
 
   return isLoading
-    ? ('Loading...') 
+    ? (<Typography>Loading...</Typography>) 
     : isError
-      ? ('Error Loading Weather Info.')
+      ? (<Typography>Error Loading Weather Info.</Typography>)
       : (
         <div className="App">
           <CityInfo info={weatherData.location || {}} />
