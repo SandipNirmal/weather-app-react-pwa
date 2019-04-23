@@ -16,8 +16,6 @@ const getWeatherForCity = (lat, lon) => {
   let headers = new Headers();
   headers.set('Authorization', auth_header);
 
-  console.log('auth_header', auth_header)
-
   return fetch(url, {headers}).then((res) => res.json())
 }
 
