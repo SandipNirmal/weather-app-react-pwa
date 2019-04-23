@@ -181,7 +181,7 @@ img.cond-code {
     white-space:nowrap;
     overflow-x: scroll;
     overflow-y: hide;
-	-webkit-overflow-scrolling:touch;
+	  -webkit-overflow-scrolling:touch;
   }
 
   .card {
@@ -201,6 +201,10 @@ img.cond-code {
 
   .details {
     flex-direction: row;
+    white-space:nowrap;
+    overflow-x: scroll;
+    overflow-y: hide;
+	  -webkit-overflow-scrolling:touch;
   }
 
   .details div {
