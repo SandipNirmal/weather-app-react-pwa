@@ -1,6 +1,6 @@
 html {
-  background: #6c00f6;
-  background: linear-gradient(23deg, #6c00f67a, #6c00f6 50%);
+  /* background: #6c00f6;
+  background: linear-gradient(23deg, #6c00f67a, #6c00f6 50%); */
   background-repeat: no-repeat;
   min-height: 100vh;
 }
@@ -16,4 +16,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.54); */
+  background: #6c00f6;
 }
