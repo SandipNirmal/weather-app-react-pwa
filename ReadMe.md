@@ -5,8 +5,10 @@
 Progressive Web App built using
 
 1. React
-2. workbox
-3. Yahoo Weather API
+2. React Hooks
+3. workbox
+4. Yahoo Weather API
+5. GeoDB API
 
 ## Yahoo Weather API
 
