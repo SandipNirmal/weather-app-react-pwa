@@ -15,9 +15,12 @@ import {
 } from './modules/weather';
 
 function App() {
+  //TODO: Add state for 
   const [weatherData, setWeatherData] = useState({weather_data: {}});
   const [isLoading, setLoading] = useState(true)
   const [isError, setError] = useState(false)
+
+  let fetchInterval = null
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,6 +43,13 @@ function App() {
     };
 
     fetchData();
+
+    // Make Fetch request every 30 minutes
+    fetchInterval = setInterval(fetchData, 30 * 60 * 1000)
+
+    return () => {
+      clearInterval(fetchInterval)
+    }
   }, []);
 
   return isLoading
