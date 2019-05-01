@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
+import Typography from 'typography-material'
 
-import {Card, Typography} from '../../components'
+import {Card} from '../../components'
 import {drawAstroImage} from './../../services'
 
 export const Astronomy = ({ data: { sunrise, sunset }}) => {

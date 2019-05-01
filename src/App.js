@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-import { Typography } from './components';
+import Typography from 'typography-material'
+
 import { getWeatherForCity, getCurrentLocation } from './services';
 
 import './App.css';

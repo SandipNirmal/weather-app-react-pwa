@@ -1,6 +1,7 @@
 import React from 'react'
+import Typography from 'typography-material'
 
-import {Card, Typography} from '../../components'
+import {Card} from '../../components'
 import {getWindDirection, milesToKms} from './../../services'
 import { Turbine } from './../../resources/icons'
 

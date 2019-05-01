@@ -1,6 +1,6 @@
 import React from 'react'
+import Typography from 'typography-material'
 
-import {Typography} from './../../components'
 import * as Cond from './../../resources/icons'
 import {farenheitToCelsius, getConditionIcon} from './../../services'
 

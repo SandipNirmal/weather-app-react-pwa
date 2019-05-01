@@ -1,6 +1,5 @@
 import React from 'react'
-
-import { Typography } from './../../components'
+import Typography from 'typography-material'
 
 export const CityInfo = React.memo(({info: {city = '--', region, country}}) => {
     return (

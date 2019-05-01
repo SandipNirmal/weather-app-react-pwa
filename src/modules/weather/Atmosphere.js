@@ -1,6 +1,7 @@
 import React from 'react'
+import Typography from 'typography-material'
 
-import {Card, Typography} from '../../components'
+import {Card} from '../../components'
 import { pressureInchesToMillibar, milesToKms } from './../../services'
 
 export const Atmosphere = React.memo(({
