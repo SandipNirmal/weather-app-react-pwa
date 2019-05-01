@@ -13,18 +13,18 @@ export const CurrentWeather = React.memo(({
 }) => {
   return (
     <div style={{
-      margin: `32px 0`
+      marginBottom: `32px`
     }}>
       <div className='flex center' style={{
         flexDirection: 'column'
       }}>
         <Typography>{text}</Typography>
-        <div className='flex center'>
+        <div className='flex center' style={{paddingTop: 16}}>
           <img
             src={Cond[`Cond_${getConditionIcon(code)}`]}
             alt={text}
             className='cond-code'/>
-          <Typography variant='h2'>{farenheitToCelsius(temperature)}&#xb0;</Typography>
+          <Typography variant='h1'>{temperature ? farenheitToCelsius(temperature) : '--' }&#xb0;</Typography>
         </div>
       </div>
     </div>
