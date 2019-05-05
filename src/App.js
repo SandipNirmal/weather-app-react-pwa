@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
 import Typography from 'typography-material'
-
 import { getWeatherForCity, getCurrentLocation } from './services';
 
 import './App.css';
@@ -14,9 +12,9 @@ import {
   Astronomy,
   Atmosphere
 } from './modules/weather';
+import { Loading } from './components'
 
 function App() {
-  //TODO: Add state for
   const [weatherData, setWeatherData] = useState({ weather_data: {} });
   const [isLoading, setLoading] = useState(true);
   const [isError, setError] = useState(false);
@@ -60,7 +58,7 @@ function App() {
   }, []);
 
   return isLoading ? (
-    <Typography>Loading...</Typography>
+    <Loading />
   ) : isError ? (
     <Typography>Error Loading Weather Info.</Typography>
   ) : (
