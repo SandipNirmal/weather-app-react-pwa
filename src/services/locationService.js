@@ -11,7 +11,7 @@ const getCurrentLocation = () => {
       navigator
         .geolocation
         .getCurrentPosition(data => {
-          console.log(data);
+          // console.log(data);
           resolve({
             lat: data.coords.latitude,
             lon: data.coords.longitude

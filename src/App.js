@@ -35,6 +35,7 @@ function App() {
       console.log('Error', e);
       setError(true);
     }
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -43,8 +44,6 @@ function App() {
 
       const {lat, lon} = await getCurrentLocation()
       fetchWeatherData(lat, lon)
-
-      setLoading(false);
     };
 
     fetchData();
