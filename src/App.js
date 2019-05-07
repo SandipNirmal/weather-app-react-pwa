@@ -35,6 +35,7 @@ function App() {
       console.log('Error', e);
       setError(true);
     }
+
     setLoading(false);
   };
 

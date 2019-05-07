@@ -4,7 +4,7 @@ import Typography from 'typography-material'
 import {Card} from '../../components'
 import {drawAstroImage} from './../../services'
 
-export const Astronomy = ({ data: { sunrise, sunset }}) => {
+export const Astronomy = React.memo(({ data: { sunrise, sunset }}) => {
   useEffect(() => drawAstroImage(sunrise, sunset), [])
 
   return (
@@ -34,4 +34,4 @@ export const Astronomy = ({ data: { sunrise, sunset }}) => {
       </Card>
     </div>
   )
-}
+})
