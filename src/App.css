@@ -50,6 +50,41 @@ img.cond-code {
   animation-delay: 0.4s;
 }
 
+/* 
+.slider {
+  width: 100vw;
+  max-width: 960px;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.slider > div {
+  width: 100%;
+  margin: 0 8px;
+  flex-shrink: 0;
+  height: 100%;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  scroll-snap-align: start;
+} */
+
+/**
+ *
+ */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.add-city {
+  padding-right: 8px;
+}
+
 /**
   * Utility classes
   */
