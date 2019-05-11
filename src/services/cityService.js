@@ -5,9 +5,7 @@
  *
  * @returns {function | Promise}
  */
-const getCityInfo = (name) => {
+export const getCityInfo = (name) => {
   const url = `${process.env.REACT_APP_GEO_DB_ENDPOINT}?namePrefix=${name}`
   return fetch(url).then((res) => res.json())
 }
-
-export {getCityInfo}

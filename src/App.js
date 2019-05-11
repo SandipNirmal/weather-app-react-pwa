@@ -6,9 +6,11 @@ import { Loading } from './components';
 import './App.css';
 
 import { Weather } from './modules/weather';
+import { AddCity } from './modules/settings'
 
 function App() {
   const [location, setLocation] = useState({});
+  const [addNew, setAddNew] = useState(false)
 
   useEffect(() => {
     const fetchLocation = async () => {
@@ -23,13 +25,19 @@ function App() {
     };
   }, []);
 
+  const toggleAddCity = () => {
+    setAddNew(!addNew)
+  }
+
   return (
     <div>
       <div className='header'>
         <div className='add-city'>
-          <Typography onClick={() => alert('Add New City')} variant='button'>Add City</Typography>
+          <Typography onClick={toggleAddCity} variant='button'>Add City</Typography>
         </div>
       </div>
+
+      {addNew ? <AddCity /> : null}
 
       {location.lat ? (
         <div className="slider">
