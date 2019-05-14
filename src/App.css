@@ -50,6 +50,41 @@ img.cond-code {
   animation-delay: 0.4s;
 }
 
+/* 
+.slider {
+  width: 100vw;
+  max-width: 960px;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.slider > div {
+  width: 100%;
+  margin: 0 8px;
+  flex-shrink: 0;
+  height: 100%;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  scroll-snap-align: start;
+} */
+
+/**
+ *
+ */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.add-city {
+  padding-right: 8px;
+}
+
 /**
   * Utility classes
   */
@@ -145,4 +180,88 @@ img.cond-code {
   .details :last-child {
     margin-right: 0;
   }
+}
+
+/**
+ * Add City
+ */
+.add-city {
+  /* position: absolute; */
+  /* top: 0; */
+  /* width: 100%;
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 4px #e1e1e1;
+  z-index: 2; */
+}
+
+.add-city input[type='text'] {
+  width: 100%
+}
+
+/**
+ * Modal CSS
+ */
+ .modalOverlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  opacity: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  animation: show 0.5s ease;
+}
+
+/** 
+*Fade-in open animation
+*/
+@keyframes show {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: flex;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/** The modal window: a empty div; vertical and horizontal cenetered.**/
+.modal {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0, 0, 0.625rem, rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 576px) {
+  .modal {
+    width: 32rem;
+  }
+}
+
+/** The close button: absolute positioning on top left of the
+ browser window; white background square with a gray X.*/
+.closeButton {
+  position: "fixed";
+  top: 0;
+  right: 0;
+  background: "#fff";
+  width: "2.5rem";
+  height: "2.5rem";
+  padding: 0;
+  border: 0;
+  cursor: "pointer";
+  outline: 0;
+  box-shadow: 0, 0, 0.625rem, rgba(0, 0, 0, 0.2);
 }
