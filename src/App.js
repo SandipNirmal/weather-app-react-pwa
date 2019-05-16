@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Typography from 'typography-material'
 import { getCurrentLocation } from './services';
-import { Loading } from './components';
+import { Loading, Modal } from './components';
 
 import './App.css';
 
 import { Weather } from './modules/weather';
-import { AddCity } from './modules/settings'
+// import { AddCity } from './modules/settings'
 
 function App() {
   const [location, setLocation] = useState({});
@@ -37,7 +37,7 @@ function App() {
         </div>
       </div>
 
-      {addNew ? <AddCity /> : null}
+      {addNew ? <Modal>Hi There</Modal> : null}
 
       {location.lat ? (
         <div className="slider">
